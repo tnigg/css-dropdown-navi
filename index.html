@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="navbar.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="branding">
+                <h2><a href="#" class="branding-logo">Logohier</a></h2>
+            </div>
+            <label for="input-hamburger" class="hamburger "></label>
+            <input type="checkbox" id="input-hamburger" hidden>
+            <ul class="menu">
+                <li><a href="#" class="menu-link">Home</a></li>
+
+                <li><a href="#" class="menu-link">Portfolio</a></li>
+                <li class="has-dropdown">
+                    <a href="#" class="menu-link">Services
+                        <span class="arrow"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#" class="menu-link">Web Design</a></li>
+                        <li><a href="#" class="menu-link">Web Development</a></li>
+                        <li class="has-dropdown">
+                            <a href="#" class="menu-link">Full Stack Development
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="submenu">
+                                <li><a href="#" class="menu-link">Wordpress Development</a></li>
+                                <li><a href="#" class="menu-link">Front End Development</a></li>
+                                <li class="has-dropdown">
+                                    <a href="#" class="menu-link">MEAN Stack Development
+                                        <span class="arrow"></span>
+                                    </a>
+                                    <ul class="submenu">
+                                        <li><a href="#" class="menu-link">MongoDb</a></li>
+                                        <li><a href="#" class="menu-link">ExpressJS</a></li>
+                                        <li><a href="#" class="menu-link">AngularJS</a></li>
+                                        <li><a href="#" class="menu-link">NodeJS</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#" class="menu-link">Back End Development</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="menu-link">UI/UX Design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="menu-link">Articles</a></li>
+
+                <li><a href="#" class="menu-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+</html>
+
+<!-- Only two steps required to make the navbar fixed both mobile and desktop: 
+1. First "header" element should be set to: 
+ header{ 
+    position: sticky;
+    top: 0;
+}
+
+2. Second inside media query you will find the "header" element selector you will find position set to relative. Just remove this rule, you're all set. 
+3.  Finally, * inside media query max-width 50em* ...set the following rule: 
+.menu{
+   overflow-y: scroll
+} -->
